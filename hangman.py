@@ -13,7 +13,7 @@ def start_game():
     print(current_guess_status)
 #Create a list and function to check valid inputs
 def check_valid(wrong,count):
-    while wrong < 7:
+    while wrong < 6:
         guess = input('Guess a letter')
         if guess.isalpha() == False:
             print('Invalid input. Please guess a letter.')
