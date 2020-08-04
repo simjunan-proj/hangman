@@ -6,3 +6,12 @@ floorball
 netball
 rugby
 dragonboat
+swimming
+archery
+volleyball
+hockey
+fencing
+judo
+golf
+boxing
+cycling
