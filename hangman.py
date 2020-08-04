@@ -18,7 +18,7 @@ def generate_word():
 def generate_secret_word_blanks():
     for count in range(number_of_char):
         secret_word_blanks.append('_')
-    print('Guess a sport that has',number_of_char,'letters! You have 6 tries! Good Luck!')
+    print('Guess a sport that has',number_of_char,'letters! You have 10 tries! Good Luck!')
     print(' '.join(secret_word_blanks))
 #Prompt player to guess a letter/word and validate input, store letter if valid
 def player_guess():
@@ -50,7 +50,7 @@ def check_correct_letter():
     elif len(guess) ==  number_of_char:
         print('Sorry, you did not guessed the correct word.')
         number_of_wrong_guesses = number_of_wrong_guesses + 1
-        tries_left = 6 - number_of_wrong_guesses
+        tries_left = 10 - number_of_wrong_guesses
         print('You have',tries_left,'more attempt!')
     elif guess in secret_word:
         print('You got it! There is the letter',guess)
@@ -63,7 +63,7 @@ def check_correct_letter():
     else:
         number_of_wrong_guesses = number_of_wrong_guesses + 1
         print('Sorry, there is no letter',guess)
-        tries_left = 6 - number_of_wrong_guesses
+        tries_left = 10 - number_of_wrong_guesses
         print('You have',tries_left,'more attempt!')
 #Check if player guessed all letters in secret words or used up all attempts
 def player_win_or_lose():
@@ -75,7 +75,7 @@ def player_win_or_lose():
         secret_word_blanks.clear()
         number_of_wrong_guesses = 0
         play_status = False
-    if number_of_wrong_guesses == 6:
+    if number_of_wrong_guesses == 10:
         print('Too bad! Better luck next time! The answer is',secret_word)
         guessed_letters.clear()
         secret_word_blanks.clear()
